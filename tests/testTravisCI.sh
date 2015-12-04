@@ -64,7 +64,7 @@ true ifTrue: [
   TravisCIHarness
     value: #( '${FULL_CONFIG_NAME}' )
     value: 'TravisCISuccess.txt' 
-    value: 'TravisCIFailure.txt ]'.
+    value: 'TravisCIFailure.txt' ].
 EOF
 else
   cat - >> $OUTPUT_PATH << EOF
