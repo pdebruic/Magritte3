@@ -35,7 +35,7 @@ REPOSITORY_LINE="  repository: '$REPOSITORY';"
 
 OUTPUT_PATH="${PROJECT_HOME}/tests/travisCI.st"
 
-if [ "$ST" = "GemStone-*" ] ; then
+if [[ "$ST" = GemStone-* ]] ; then
   cat - >> $OUTPUT_PATH << EOF
  Transcript cr; show: 'travis--->${OUTPUT_PATH}'.
  "Upgrade Grease and Metacello"
