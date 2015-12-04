@@ -1,3 +1,5 @@
+sudo: required
+
 env:
    - ST=Pharo-3.0 BASELINE=Magritte3 LOADS="'CI'" REPOSITORY="filetree://${TRAVIS_BUILD_DIR}/repository"
 #   - ST=Pharo-4.0 BASELINE=Magritte3 LOADS="'CI'" REPOSITORY="filetree://${TRAVIS_BUILD_DIR}/repository"
