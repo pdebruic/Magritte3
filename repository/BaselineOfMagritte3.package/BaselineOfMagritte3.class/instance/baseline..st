@@ -5,10 +5,6 @@ baseline: spec
     for: #'common'
       do: [ 
           spec
-            project: 'Grease';
-            project: 'Seaside3';
-            yourself.
-          spec
             package: 'Magritte-Model' with: [ spec requires: #('Grease') ];
             package: 'Magritte-Tests-Model'
               with: [ spec requires: #('Magritte-Model') ];
