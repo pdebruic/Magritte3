@@ -50,7 +50,7 @@ if [[ "$ST" = GemStone-* ]] ; then
    $PROJECT_LINE
    $VERSION_LINE
    $REPOSITORY_LINE
-   load: #( ${LOADS} ).
+   load: #( ${LOADS} ) ].
  
  "Run the tests"
 true ifTrue: [
