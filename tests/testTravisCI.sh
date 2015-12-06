@@ -53,7 +53,7 @@ if [[ "$ST" = GemStone-* ]] ; then
    load: #( ${LOADS} ) ].
  
  "Run the tests"
-true ifTrue: [
+false ifTrue: [
   "Run all tests in image"
    TravisCISuiteHarness
      value: TestCase suite
