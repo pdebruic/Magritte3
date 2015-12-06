@@ -1,8 +1,12 @@
 TDObjectGatewayLeafNode{#name:'magritte',#contents:'^ TDProjectSpecEntryDefinition new
-    configuration: \'Magritte3\'
-      version: \'3.2.0\'
-      repository: \'http://www.squeaksource.com/MetacelloRepository\'
-      loads: #(\'Seaside\' \'Tests\');
-    status: #(#\'inactive\');
+    baseline: \'Magritte3\'
+      repository: \'github://GsDevKit/Magritte3:master/repository\'
+      loads: #( \'Tests\' \'Seaside\' );
+    installScript: \'
+      project clone --https --local Magritte3
+      project install --local --url=http://gsdevkit.github.io/GsDevKit_home/Seaside3.ston\';
+    gitCheckout: \'master\';
+    status: #( #\'inactive\' );
     locked: true;
-    yourself'}
+    yourself.
+'}

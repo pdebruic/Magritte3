@@ -1,4 +1,3 @@
 TDTopezLeafNode{#name:'installMagritte3',#contents:'cp /home/magritte/magritte /sys/stone/projects
-project install --stone --url=http://gsdevkit.github.io/GsDevKit_home/Seaside31.ston
-project load Magritte3
-project list',#creationTime:DateAndTime['2015-11-30T15:14:48.9561309814453-08:00'],#modificationTime:DateAndTime['2015-12-04T12:08:59.9875490665435-08:00']}
+project load --install Magritte3
+project list',#creationTime:DateAndTime['2015-11-30T15:14:48.9561309814453-08:00'],#modificationTime:DateAndTime['2015-12-05T17:32:56.4320828914642-08:00']}
