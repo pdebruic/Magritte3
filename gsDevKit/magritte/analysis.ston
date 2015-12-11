@@ -67,5 +67,12 @@ UUID: ae6b6270-d42f-4984-8bac-735a1f57f201
 Ancestors: Magritte-Seaside-StephanEggermont.358
 
 Adds #isSortable testing to MADescribedColumn delegating to its Magritte description whether it is sortable or not.
+========================
+Name: Magritte-Pharo3-Model-JohnCBorden.4
+Author: JohnCBorden
+Time: 04/26/2015, 01:54:44
+UUID: 0e70eb41-d287-2946-b278-b548c1964dd7
+Ancestors: Magritte-Pharo3-Model-DiegoLont.3
 
-',#creationTime:DateAndTime['2015-12-11T10:43:25.2366979122161-08:00'],#modificationTime:DateAndTime['2015-12-11T10:52:16.603765964508-08:00']}
+Replace TimeStamp with DateAndTime - http://borden.pharocloud.com/pier/john-c-borden/updates/pier-3.1-changes
+',#creationTime:DateAndTime['2015-12-11T10:43:25.2366979122161-08:00'],#modificationTime:DateAndTime['2015-12-11T10:54:37.804603099823-08:00']}
