@@ -65,7 +65,7 @@ baseline: spec
         package: 'Magritte-Pharo-Model';
         yourself ].
   spec
-    for: #(#'pharo3.x' #'pharo4.x' #'pharo5.x')
+    for: #(#'pharo3.x' #'pharo4.x')
     do: [ 
       spec
         package: 'Magritte-Pharo3-Model'
@@ -74,7 +74,10 @@ baseline: spec
           with: [ spec requires: #('Magritte-Pharo3-Model') ];
         package: 'Magritte-Model'
           with: [ spec includes: #('Magritte-Pharo3-Model') ];
-        package: 'Magritte-Pharo-Model' with: 'Magritte-Pharo3-Model'	" create a temporary alias " ].
+        package: 'Magritte-Pharo-Model' with: 'Magritte-Pharo3-Model' ].
+  spec
+    for: #'pharo4.x'
+    do: [ spec package: 'Magritte-GT' with: 'Magritte-GT-SeanDeNigris.1' ].
   spec
     for: #'gemstone'
     do: [ 
