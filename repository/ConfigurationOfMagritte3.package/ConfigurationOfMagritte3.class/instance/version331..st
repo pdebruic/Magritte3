@@ -5,9 +5,11 @@ version331: spec
     for: #'common'
     do: [ 
       spec blessing: #'release'.
-      spec description: 'configuration in order to avoid deprecated methods'.
-      spec author: 'CyrilFerlicot'.
-      spec timestamp: '05/06/2015 10:51'.
+      spec
+        description:
+          'configuration in order to avoid deprecated methods $ pick up changes from Magritte-Pharo3-Model-JohnCBorden.4 for GemStone (Magritte-GemStone-Model-dkh.5)'.
+      spec author: 'CyrilFerlicot & dkh'.
+      spec timestamp: '05/06/2015 10:51 & 12/11/2015 14:55'.
       spec
         project: 'Grease' with: #'release1.1';
         project: 'Seaside3' with: #'release3.1'.
@@ -35,7 +37,10 @@ version331: spec
     do: [ spec package: 'Magritte-Pharo-Model' with: 'Magritte-Pharo-Model-DiegoLont.39' ].
   spec
     for: #(#'pharo3.x' #'pharo4.x')
-    do: [ spec package: 'Magritte-Pharo3-Model' with: 'Magritte-Pharo3-Model-JohnCBorden.4' ].
+    do: [ 
+      spec
+        package: 'Magritte-Pharo3-Model'
+        with: 'Magritte-Pharo3-Model-JohnCBorden.4' ].
   spec
     for: #'pharo4.x'
     do: [ spec package: 'Magritte-GT' with: 'Magritte-GT-SeanDeNigris.1' ].
@@ -45,7 +50,7 @@ version331: spec
       spec project: 'GsCore' with: '0.242'.
       spec
         package: 'Magritte-GemStone-Model'
-          with: 'Magritte-GemStone-Model-dkh.4';
+          with: 'Magritte-GemStone-Model-dkh.5';
         package: 'Magritte-Tests-GemStone-Model'
           with: 'Magritte-Tests-GemStone-Model-DaleHenrichs.1';
         package: 'Magritte-GemStone-Seaside'
