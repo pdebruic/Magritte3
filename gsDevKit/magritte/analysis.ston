@@ -59,5 +59,13 @@ UUID: 3515cfe0-2abf-4343-83df-58b10ea7d6a7
 Ancestors: Magritte-Model-EstebanMaringolo.452
 
 Rename MAStraitMemento -> MAStraightMemento, correcting spelling
+========================
+Name: Magritte-Seaside-EstebanMaringolo.359
+Author: EstebanMaringolo
+Time: 10/01/2014, 05:02:04
+UUID: ae6b6270-d42f-4984-8bac-735a1f57f201
+Ancestors: Magritte-Seaside-StephanEggermont.358
 
-',#creationTime:DateAndTime['2015-12-11T10:43:25.2366979122161-08:00'],#modificationTime:DateAndTime['2015-12-11T10:45:05.0376539230346-08:00']}
+Adds #isSortable testing to MADescribedColumn delegating to its Magritte description whether it is sortable or not.
+
+',#creationTime:DateAndTime['2015-12-11T10:43:25.2366979122161-08:00'],#modificationTime:DateAndTime['2015-12-11T10:52:16.603765964508-08:00']}
