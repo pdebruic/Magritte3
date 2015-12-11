@@ -77,7 +77,7 @@ baseline: spec
         package: 'Magritte-Pharo-Model' with: 'Magritte-Pharo3-Model' ].
   spec
     for: #'pharo4.x'
-    do: [ spec package: 'Magritte-GT' with: 'Magritte-GT-SeanDeNigris.1' ].
+    do: [ spec package: 'Magritte-GT' with: 'Magritte-GT' ].
   spec
     for: #'gemstone'
     do: [ 
