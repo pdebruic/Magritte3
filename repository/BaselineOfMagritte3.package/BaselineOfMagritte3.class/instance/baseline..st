@@ -18,7 +18,7 @@ baseline: spec
             group: 'Core' with: #('Magritte-Model');
             group: 'Tests' with: #('Magritte-Tests-Model');
             group: 'Seaside' with: #('Magritte-Seaside');
-            group: 'CI' with: #('Seaside');
+            group: 'CI' with: #('Seaside' 'Tests');
             group: 'Deprecated' with: #('Magritte-Deprecated') ];
     yourself.
   spec
