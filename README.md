@@ -33,3 +33,7 @@ devKitCommandLine todeIt magritte << EOF
  /home/magritte/gemServer --start=seaside
 EOF
 ```
+
+```
+http://localhost:1750/magritte/editor
+```
