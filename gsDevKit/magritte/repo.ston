@@ -1,3 +1,0 @@
-TDTopezLeafNode{#name:'repo',#contents:'mr create http://smalltalkhub.com/mc/Magritte/Magritte3/main
-mc load ConfigurationOfMagritte3 http://smalltalkhub.com/mc/Magritte/Magritte3/main
-browse class --full ConfigurationOfMagritte3 ',#creationTime:DateAndTime['2015-12-10T16:47:02.895572900772-08:00'],#modificationTime:DateAndTime['2015-12-10T16:49:00.0953478813171-08:00']}
