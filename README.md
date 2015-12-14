@@ -23,7 +23,7 @@ devKitCommandLine todeIt magritte << EOF
  # load Magritte3
  project load Magritte3
  # load Seaside3 
- project load --loads=\`'Zinc'\` Seaside3
+ project load --loads=\`#( 'Zinc' )\` Seaside3
  project list
  # mount Magritte3 tODE script directory
  mount /stone/dirs/Magritte3/gsDevKit/magritte /home magritte
