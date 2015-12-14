@@ -75,4 +75,41 @@ UUID: 0e70eb41-d287-2946-b278-b548c1964dd7
 Ancestors: Magritte-Pharo3-Model-DiegoLont.3
 
 Replace TimeStamp with DateAndTime - http://borden.pharocloud.com/pier/john-c-borden/updates/pier-3.1-changes
-',#creationTime:DateAndTime['2015-12-11T10:43:25.2366979122161-08:00'],#modificationTime:DateAndTime['2015-12-11T10:54:37.804603099823-08:00']}
+---
+3.4.2
+========================
+Name: Magritte-Model-SeanDeNigris.459
+Author: SeanDeNigris
+Time: 07/07/2015, 12:12:07
+UUID: 22981f37-21ce-4a74-bf72-c648248132a1
+Ancestors: Magritte-Model-StephanEggermont.458
+
+MAPragmaBuilder - make description pragma configurable; a better design might be to delegate to the model object, so that one does not have to override #basicMagritteDescription to hijack the builder instance...
+
+Name: Magritte-Model-SeanDeNigris.460
+Author: SeanDeNigris
+Time: 07/30/2015, 10:41:29
+UUID: c0823f38-91eb-419e-b690-95ca63635b0c
+Ancestors: Magritte-Model-StephanEggermont.458
+
+[BUG]: For Dates, instead of printing \"nil\", leave blank
+
+Name: Magritte-Model-SeanDeNigris.461
+Author: SeanDeNigris
+Time: 08/06/2015, 06:13:18
+UUID: 0a30aa23-eaab-489a-81e4-ca08b5349080
+Ancestors: Magritte-Model-StephanEggermont.458
+
+Add URL description
+
+Name: Magritte-Model-SeanDeNigris.462
+Author: SeanDeNigris
+Time: 08/06/2015, 06:16:27
+UUID: 263bea67-51f8-42e6-979c-1eb5dd9fb3d5
+Ancestors: Magritte-Model-SeanDeNigris.461, Magritte-Model-SeanDeNigris.460
+
+Merge:
+- [ENH]: Add URL description
+- [BUG]: For Dates, instead of printing \"nil\", leave blank
+
+',#creationTime:DateAndTime['2015-12-11T10:43:25.2366979122161-08:00'],#modificationTime:DateAndTime['2015-12-13T18:05:55.9767758846283-08:00']}
