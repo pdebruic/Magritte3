@@ -26,7 +26,7 @@ devKitCommandLine todeIt magritte << EOF
  project load --loads=\`#( 'Zinc' )\` Seaside3
  project list
  # mount Magritte3 tODE script directory
- mount /stone/dirs/Magritte3/gsDevKit/magritte /home magritte
+ mount @/sys/stone/dirs/Magritte3/gsDevKit/magritte /home magritte
  bu backup magritte.dbf
  # register and launch a Seaside gemServer
  /home/magritte/gemServer --register=seaside --type=zinc --port=1750
