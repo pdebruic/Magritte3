@@ -5,10 +5,7 @@ version332: spec
     for: #'common'
     do: [ 
       spec blessing: #'release'.
-      spec
-        description:
-          'In-place fix add: pharo 5, StephanEggermont 2015-7-12
-In-place fix: update to use Magritte-GemStone-Model-dkh.5 12/11/2015
+      spec description: 'In-place fix add: pharo 5, StephanEggermont 2015-7-12
  configuration in order to avoid deprecated methods'.
       spec author: 'CyrilFerlicot'.
       spec timestamp: '05/06/2015 10:51'.
@@ -39,10 +36,7 @@ In-place fix: update to use Magritte-GemStone-Model-dkh.5 12/11/2015
     do: [ spec package: 'Magritte-Pharo-Model' with: 'Magritte-Pharo-Model-DiegoLont.39' ].
   spec
     for: #(#'pharo3.x' #'pharo4.x' #'pharo5.x')
-    do: [ 
-      spec
-        package: 'Magritte-Pharo3-Model'
-        with: 'Magritte-Pharo3-Model-JohnCBorden.4' ].
+    do: [ spec package: 'Magritte-Pharo3-Model' with: 'Magritte-Pharo3-Model-JohnCBorden.4' ].
   spec
     for: #(#'pharo4.x' #'pharo5.x')
     do: [ spec package: 'Magritte-GT' with: 'Magritte-GT-SeanDeNigris.3' ].
@@ -52,7 +46,7 @@ In-place fix: update to use Magritte-GemStone-Model-dkh.5 12/11/2015
       spec project: 'GsCore' with: '0.242'.
       spec
         package: 'Magritte-GemStone-Model'
-          with: 'Magritte-GemStone-Model-dkh.5';
+          with: 'Magritte-GemStone-Model-dkh.4';
         package: 'Magritte-Tests-GemStone-Model'
           with: 'Magritte-Tests-GemStone-Model-DaleHenrichs.1';
         package: 'Magritte-GemStone-Seaside'

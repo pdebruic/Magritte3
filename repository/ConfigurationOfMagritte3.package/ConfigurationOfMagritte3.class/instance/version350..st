@@ -5,10 +5,7 @@ version350: spec
     for: #'common'
     do: [ 
       spec blessing: #'development'.
-      spec
-        description:
-          'In-place fix: update to use Magritte-GemStone-Model-dkh.5 12/11/2015
--[Feature]: Meta-describe GT presentations https://github.com/magritte-metamodel/magritte/issues/26
+      spec description: '-[Feature]: Meta-describe GT presentations https://github.com/magritte-metamodel/magritte/issues/26
 - [ENH]: Provide hook to initialize ToMany Instances https://github.com/magritte-metamodel/magritte/issues/18
 - [ENH]: Actions; fill out a few dark corners
 - [BUG]: Hack to make ToOne Morphs work i.e. stop infinite recursion, by duplicating ToMany logic (for now). https://github.com/magritte-metamodel/magritte/issues/25
@@ -46,22 +43,20 @@ version350: spec
     do: [ spec package: 'Magritte-Pharo-Model' with: 'Magritte-Pharo-Model-DiegoLont.39' ].
   spec
     for: #(#'pharo3.x' #'pharo4.x' #'pharo5.x')
-    do: [ 
-      spec
-        package: 'Magritte-Pharo3-Model'
-        with: 'Magritte-Pharo3-Model-JohnCBorden.4' ].
+    do: [ spec package: 'Magritte-Pharo3-Model' with: 'Magritte-Pharo3-Model-JohnCBorden.4' ].
   spec
     for: #(#'pharo4.x')
     do: [ 
-      spec project: 'MagritteGlamourForPharo40' with: '1.0'.
-      spec package: 'Magritte-GT' with: 'Magritte-GT-SeanDeNigris.5' ].
+			spec
+        project: 'MagritteGlamourForPharo40' with: '1.0'.
+			spec package: 'Magritte-GT' with: 'Magritte-GT-SeanDeNigris.5' ].
   spec
     for: #'gemstone'
     do: [ 
       spec project: 'GsCore' with: '0.242'.
       spec
         package: 'Magritte-GemStone-Model'
-          with: 'Magritte-GemStone-Model-dkh.5';
+          with: 'Magritte-GemStone-Model-dkh.4';
         package: 'Magritte-Tests-GemStone-Model'
           with: 'Magritte-Tests-GemStone-Model-DaleHenrichs.1';
         package: 'Magritte-GemStone-Seaside'

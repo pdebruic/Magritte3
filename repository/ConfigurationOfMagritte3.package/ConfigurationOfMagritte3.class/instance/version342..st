@@ -5,10 +5,7 @@ version342: spec
     for: #'common'
     do: [ 
       spec blessing: #'release'.
-      spec
-        description:
-          'In-place fix: update to use Magritte-GemStone-Model-dkh.5 12/11/2015
-- [ENH]: Add URL description
+      spec description: '- [ENH]: Add URL description
 - [BUG]: For Dates, instead of printing "nil", leave blank'.
       spec author: 'SeanDeNigris'.
       spec timestamp: '08/06/2015 10:51'.
@@ -39,10 +36,7 @@ version342: spec
     do: [ spec package: 'Magritte-Pharo-Model' with: 'Magritte-Pharo-Model-DiegoLont.39' ].
   spec
     for: #(#'pharo3.x' #'pharo4.x' #'pharo5.x')
-    do: [ 
-      spec
-        package: 'Magritte-Pharo3-Model'
-        with: 'Magritte-Pharo3-Model-JohnCBorden.4' ].
+    do: [ spec package: 'Magritte-Pharo3-Model' with: 'Magritte-Pharo3-Model-JohnCBorden.4' ].
   spec
     for: #(#'pharo4.x' #'pharo5.x')
     do: [ spec package: 'Magritte-GT' with: 'Magritte-GT-SeanDeNigris.3' ].
@@ -52,7 +46,7 @@ version342: spec
       spec project: 'GsCore' with: '0.242'.
       spec
         package: 'Magritte-GemStone-Model'
-          with: 'Magritte-GemStone-Model-dkh.5';
+          with: 'Magritte-GemStone-Model-dkh.4';
         package: 'Magritte-Tests-GemStone-Model'
           with: 'Magritte-Tests-GemStone-Model-DaleHenrichs.1';
         package: 'Magritte-GemStone-Seaside'
