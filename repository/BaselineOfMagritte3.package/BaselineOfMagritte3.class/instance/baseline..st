@@ -18,7 +18,7 @@ baseline: spec
             group: 'Core' with: #('Magritte-Model');
             group: 'Tests' with: #('Magritte-Tests-Model');
             group: 'Seaside' with: #('Magritte-Seaside');
-            group: 'CI' with: #('Seaside');
+            group: 'CI' with: #('Seaside' 'Tests');
             group: 'Deprecated' with: #('Magritte-Deprecated') ];
     yourself.
   spec
@@ -65,7 +65,7 @@ baseline: spec
         package: 'Magritte-Pharo-Model';
         yourself ].
   spec
-    for: #(#'pharo3.x' #'pharo4.x')
+    for: #(#'pharo3.x' #'pharo4.x' #'pharo5.x')
     do: [ 
       spec
         package: 'Magritte-Pharo3-Model'
@@ -76,7 +76,7 @@ baseline: spec
           with: [ spec includes: #('Magritte-Pharo3-Model') ];
         package: 'Magritte-Pharo-Model' with: 'Magritte-Pharo3-Model' ].
   spec
-    for: #'pharo4.x'
+    for: #(#'pharo4.x' #'pharo5.x')
     do: [ spec package: 'Magritte-GT' with: 'Magritte-GT' ].
   spec
     for: #'gemstone'
