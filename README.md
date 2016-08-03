@@ -19,10 +19,11 @@ GsDeployer
 createStone magritte 3.2.12
 devKitCommandLine todeIt magritte << EOF
  # clone Magritte3 and Seaside3 projects
+ project install --url=http://gsdevkit.github.io/GsDevKit_home/Seaside3.ston
  project install --url=http://gsdevkit.github.io/GsDevKit_home/Magritte3.ston
  # load Magritte3
- project load Magritte3
- # load Seaside3 
+ project load --loads=\`#('Seaside')\`Magritte3
+ # load Seaside3 (to get Zinc web server) 
  project load --loads=\`#( 'Zinc' )\` Seaside3
  project list
  # mount Magritte3 tODE script directory
