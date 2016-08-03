@@ -28,9 +28,9 @@ devKitCommandLine todeIt magritte << EOF
  # mount Magritte3 tODE script directory
  mount @/sys/stone/dirs/Magritte3/gsDevKit/magritte /home magritte
  bu backup magritte.dbf
- # register and launch a Seaside gemServer
- /home/magritte/gemServer --register=seaside --type=zinc --port=1750
- /home/magritte/gemServer --start=seaside
+ # register and launch a Seaside web server (see 'home/magritte/seasideWebServer -h' for more info)
+ /home/magritte/seasideWebServer --register=seaside --type=zinc --port=1750
+ /home/magritte/seasideWebServer --start=seaside
 EOF
 ```
 

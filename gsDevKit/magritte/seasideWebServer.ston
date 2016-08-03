@@ -1,6 +1,6 @@
-TDScriptLeafNode{#name:'gemServer',#contents:'[ :topez :objIn :tokens :command :commandNode | 
+TDScriptLeafNode{#name:'seasideWebServer',#contents:'[ :topez :objIn :tokens :command :commandNode | 
   | opts args |
-  \"for help: ./gemServer -h\"
+  \"for help: ./seasideWebServer -h\"
   command
     getOptsMixedLongShort:
       {#(\'help\' $h #\'none\').
@@ -21,7 +21,7 @@ TDScriptLeafNode{#name:'gemServer',#contents:'[ :topez :objIn :tokens :command :
   opts
     at: \'help\'
     ifAbsent: [ 
-      | gemServer result |
+      | seasideWebServer result |
       result := #\'noop\'.
       opts
         at: \'unregister\'
@@ -30,55 +30,55 @@ TDScriptLeafNode{#name:'gemServer',#contents:'[ :topez :objIn :tokens :command :
           opts
             at: \'register\'
             ifPresent: [ :serverName | 
-              gemServer := (GemServer gemServerNamed: serverName)
+              seasideWebServer := (GemServer seasideWebServerNamed: serverName)
                 ifNil: [ 
-                  | gemServerClass |
+                  | seasideWebServerClass |
                   opts
                     at: \'type\'
                     ifPresent: [ :adaptor | 
                       adaptor = \'zinc\'
-                        ifTrue: [ gemServerClass := ZnSeasideNewGemServer ]
+                        ifTrue: [ seasideWebServerClass := ZnSeasideNewGemServer ]
                         ifFalse: [ 
                           adaptor = \'fastcgi\'
-                            ifTrue: [ gemServerClass := FastCGISeasideGemServer ]
+                            ifTrue: [ seasideWebServerClass := FastCGISeasideGemServer ]
                             ifFalse: [ 
                               adaptor = \'swazoo\'
-                                ifTrue: [ gemServerClass := SwazooSeasideGemServer ]
+                                ifTrue: [ seasideWebServerClass := SwazooSeasideGemServer ]
                                 ifFalse: [ self error: \'unknown  adaptor type: \' , adaptor printString ] ] ] ]
-                    ifAbsent: [ gemServerClass := ZnSeasideGemServer ].
-                  gemServer := (gemServerClass register: serverName) yourself ].
+                    ifAbsent: [ seasideWebServerClass := ZnSeasideGemServer ].
+                  seasideWebServer := (seasideWebServerClass register: serverName) yourself ].
               opts
                 at: \'port\'
-                ifPresent: [ :portString | gemServer ports: {(portString asNumber)} ].
+                ifPresent: [ :portString | seasideWebServer ports: {(portString asNumber)} ].
               opts
                 at: \'log\'
                 ifPresent: [ :logString | 
                   logString = \'all\'
-                    ifTrue: [ gemServer logFilter: nil ]
-                    ifFalse: [ gemServer logFilter: logString asSymbol ].
+                    ifTrue: [ seasideWebServer logFilter: nil ]
+                    ifFalse: [ seasideWebServer logFilter: logString asSymbol ].
                   opts
                     at: \'logTo\'
                     ifPresent: [ :logToString | 
                       logToString = \'objectLog\'
-                        ifTrue: [ gemServer logToObjectLog ]
+                        ifTrue: [ seasideWebServer logToObjectLog ]
                         ifFalse: [ 
                           logToString = \'transcript\'
-                            ifTrue: [ gemServer logToTranscript ] ] ] ] ].
-          result := gemServer ].
+                            ifTrue: [ seasideWebServer logToTranscript ] ] ] ] ].
+          result := seasideWebServer ].
       opts
         at: \'restart\'
-        ifPresent: [ :serverName | result := (GemServer gemServerNamed: serverName) restartGems ].
+        ifPresent: [ :serverName | result := (GemServer seasideWebServerNamed: serverName) restartGems ].
       opts
         at: \'start\'
-        ifPresent: [ :serverName | result := (GemServer gemServerNamed: serverName) startGems ].
+        ifPresent: [ :serverName | result := (GemServer seasideWebServerNamed: serverName) startGems ].
       opts
         at: \'interactiveStart\'
         ifPresent: [ :serverName | 
-          gemServer := GemServer gemServerNamed: serverName.
-          gemServer interactiveStartServiceOn: gemServer ports first\t\"does not return\" ].
+          seasideWebServer := GemServer seasideWebServerNamed: serverName.
+          seasideWebServer interactiveStartServiceOn: seasideWebServer ports first\t\"does not return\" ].
       opts
         at: \'stop\'
-        ifPresent: [ :serverName | result := (GemServer gemServerNamed: serverName) stopGems ].
+        ifPresent: [ :serverName | result := (GemServer seasideWebServerNamed: serverName) stopGems ].
       opts
         at: \'errorHandler\'
         ifPresent: [ :handler | 
@@ -120,38 +120,38 @@ TDScriptLeafNode{#name:'gemServer',#contents:'[ :topez :objIn :tokens :command :
       TDManPage
         viewManPage:
           \'NAME
-  gemServer - gemServer sript utility template
+  seasideWebServer - seasideWebServer sript utility template
 SYNOPSIS
-  gemServer [-h|--help]
-  gemserver --register=<gemServer-name> --type=[zinc|fastcgi|swazoo] \\
+  seasideWebServer [-h|--help]
+  gemserver --register=<seasideWebServer-name> --type=[zinc|fastcgi|swazoo] \\
             [--port=<server-port>] \\
             [--logTo=transcript|objectLog] [--log=all|debug|error|info] \\
-  gemServer --unregister=<gemServer-name>
-  gemServer --interactiveStart=<gemServer-name>
-  gemServer --start=<gemServer-name>
-  gemServer --stop=<gemServer-name>
-  gemServer --restart=<gemServer-name>
-  gemServer --errorHandler=remoteHandler|productionHandler|interactiveHandler
+  seasideWebServer --unregister=<seasideWebServer-name>
+  seasideWebServer --interactiveStart=<seasideWebServer-name>
+  seasideWebServer --start=<seasideWebServer-name>
+  seasideWebServer --stop=<seasideWebServer-name>
+  seasideWebServer --restart=<seasideWebServer-name>
+  seasideWebServer --errorHandler=remoteHandler|productionHandler|interactiveHandler
 
 DESCRIPTION
 EXAMPLES
-  ./gemServer --help
-  ./gemServer -h
-  ./gemServer --register=seaside --type=zinc --port=1750 --log=all \\
+  ./seasideWebServer --help
+  ./seasideWebServer -h
+  ./seasideWebServer --register=seaside --type=zinc --port=1750 --log=all \\
               --logTo=transcript
-  ./gemServer --register=seaside --type=zinc --port=1750 --log=error \\
+  ./seasideWebServer --register=seaside --type=zinc --port=1750 --log=error \\
               --logTo=transcript
-  ./gemServer --register=seaside --type=zinc --port=1750 --log=error \\
+  ./seasideWebServer --register=seaside --type=zinc --port=1750 --log=error \\
                --logTo=objectLog
-  ./gemServer --unregister=seaside
-  ./gemServer --errorHandler=productionHandler
+  ./seasideWebServer --unregister=seaside
+  ./seasideWebServer --errorHandler=productionHandler
 
-  ./gemServer --errorHandler=interactiveHandler
-  ./gemServer --interactiveStart=seaside
+  ./seasideWebServer --errorHandler=interactiveHandler
+  ./seasideWebServer --interactiveStart=seaside
 
-  ./gemServer --start=seaside
-  ./gemServer --stop=seaside
-  ./gemServer --restart=seaside
+  ./seasideWebServer --start=seaside
+  ./seasideWebServer --stop=seaside
+  ./seasideWebServer --restart=seaside
 
 \'
         topez: topez ] ]',#creationTime:DateAndTime['2015-12-14T11:09:43.1644299030304-08:00'],#modificationTime:@2}
