@@ -10,7 +10,6 @@
 		"read:" : "lr 3/9/2006 11:31",
 		"readBlock" : "lr 3/9/2006 11:31",
 		"readBlock:" : "lr 3/9/2006 11:31",
-		"storeBlock:on:" : "jf 9/30/2009 01:10",
 		"storeOn:" : "lr 9/3/2009 17:14",
 		"write:to:" : "lr 3/9/2006 11:31",
 		"writeBlock" : "lr 3/9/2006 11:31",

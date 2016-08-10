@@ -1,4 +1,4 @@
-*magritte-model-actions
+*Magritte-Pharo3-Model
 magritteActions
 
 	| descriptionSelectors descriptions |
