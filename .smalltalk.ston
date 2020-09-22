@@ -1,0 +1,11 @@
+SmalltalkCISpec {
+  #loading : [
+    SCIMetacelloLoadSpec {
+      #baseline : 'Magritte3',
+      #load : [ 'CI' ],
+      #onWarningLog : true,
+      #directory : 'repository',
+      #platforms : [ #gemstone ]
+    }
+  ]
+}
