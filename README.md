@@ -1,4 +1,5 @@
-# Magritte3
+# Magritte3 [![Build Status](https://github.com/GsDevKitMagritte3/actions/workflows/ci.yml/badge.svg?branch=gemstone)](https://github.com/GsDevKit/Magritte3/actions/workflows/ci.yml)
+
 The Magritte Meta-Model ported to GemStone/GsDevKit
 
 ## GemStone Installation (Metacello)
