@@ -7,8 +7,8 @@ baseline: spec
 			spec
 				baseline: 'Grease' with: [ 
 					spec
-						loads: #( 'Core' );
-						repository: 'github://SeasideSt/Grease:master/repository' ];
+						loads: #( 'Grease-Core' );
+						repository: 'github://GsDevKit/Grease:master/repository' ];
 				baseline: 'Seaside3'
 				with: [ "note: we do not want to depend on Zinc, since this is not present in Squeak. Currently no adapter is loaded"
 					spec
