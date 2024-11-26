@@ -1,1 +1,1 @@
-SystemOrganization addCategory: #'BaselineOfMagritte3'!
+SystemOrganization addCategory: #BaselineOfMagritte3!
